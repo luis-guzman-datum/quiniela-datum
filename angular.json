@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "3ec41573-55a8-417c-8c01-81155ae28268"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -28,12 +31,19 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/manifest.webmanifest"
             ],
             "styles": [
+              "node_modules/materialize-css/dist/css/materialize.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/js/jquery.js",
+              "node_modules/materialize-css/dist/js/materialize.js"
+            ],
+            "serviceWorker": true,
+            "ngswConfigPath": "ngsw-config.json"
           },
           "configurations": {
             "production": {
@@ -96,12 +106,17 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/manifest.webmanifest"
             ],
             "styles": [
+              "node_modules/materialize-css/dist/css/materialize.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/js/jquery.js",
+              "node_modules/materialize-css/dist/js/materialize.js"
+            ]
           }
         }
       }
